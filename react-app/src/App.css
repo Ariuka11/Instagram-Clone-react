@@ -1,3 +1,6 @@
+*{
+    margin: 0;
+}
 .app {
     background: #fafafa;
     height: 100vh;
@@ -11,4 +14,9 @@
     margin: 0;
     padding: 0;
     height: 7rem;
+}
+.post-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
