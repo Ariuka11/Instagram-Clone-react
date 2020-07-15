@@ -1,0 +1,14 @@
+.app {
+    background: #fafafa;
+    height: 100vh;
+}
+.app-header{
+    background: white;
+    object-fit: contain;
+    border-bottom: 2px solid lightgray;
+}
+.logo {
+    margin: 0;
+    padding: 0;
+    height: 7rem;
+}
