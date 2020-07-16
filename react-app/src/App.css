@@ -9,6 +9,8 @@
     background: white;
     object-fit: contain;
     border-bottom: 2px solid lightgray;
+    display: flex;
+    justify-content: space-between;
 }
 .logo {
     margin: 0;
@@ -19,4 +21,11 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+.app-signup{
+    display: flex;
+    flex-direction: column;
+}
+.app-login-container{
+    align-self: center;
 }
