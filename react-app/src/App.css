@@ -1,31 +1,34 @@
-*{
-    margin: 0;
+* {
+  margin: 0;
 }
 .app {
-    background: #fafafa;
-    height: 100vh;
+  background: #fafafa;
+  height: 100vh;
 }
-.app-header{
-    background: white;
-    object-fit: contain;
-    border-bottom: 2px solid lightgray;
-    display: flex;
-    justify-content: space-between;
+.app-header {
+  background: white;
+  object-fit: contain;
+  border-bottom: 2px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
 }
 .logo {
-    margin: 0;
-    padding: 0;
-    height: 7rem;
+  margin-left: 2rem;
+  object-fit: contain;
+  height: 4rem;
+  width: 6rem;
 }
 .post-container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
 }
-.app-signup{
-    display: flex;
-    flex-direction: column;
+.app-signup {
+  display: flex;
+  flex-direction: column;
 }
-.app-login-container{
-    align-self: center;
+.app-login-container {
+  align-self: center;
 }

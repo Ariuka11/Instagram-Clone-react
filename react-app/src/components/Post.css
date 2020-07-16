@@ -1,8 +1,8 @@
 .post {
   max-width: 50rem;
   background: white;
-  border:2px solid lightgray;
-  margin-top: 4rem;
+  border: 2px solid lightgray;
+  margin-top: 2rem;
 }
 .post-header {
   display: flex;
@@ -20,5 +20,33 @@
 }
 .post-h4 {
   font-weight: normal;
-  padding: 1.5rem;
+  padding: 1rem;
+}
+.post-commentbox {
+  display: flex;
+
+}
+.post-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-top: 1px solid lightgray;
+
+}
+.post-input:hover {
+  transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+  -moz-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  -o-transform: scale(1.01);
+}
+.post-button{
+  flex:0;
+  border: none;
+  color: #6082a3;
+  background: transparent;
+  border-top: 1px solid lightgray;
+}
+.post-comment {
+  padding-left: 1rem;
 }
