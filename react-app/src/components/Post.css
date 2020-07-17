@@ -1,16 +1,26 @@
 .post {
-  max-width: 50rem;
+  max-width: 40rem;
   background: white;
-  border: 2px solid lightgray;
+  border: 1px solid lightgray;
   margin-top: 2rem;
+  font-size: 14px;
 }
 .post-header {
   display: flex;
   align-items: center;
-  margin: 1rem;
+  margin: 0.6rem;
+  justify-content: space-between;
+}
+.avatar-h4 {
+  display:  flex;
+}
+.avatar-h4 h4 {
+  font-weight: 600;
+  margin-left: 0.7rem;
+  align-self: center;
 }
 .post-avatar {
-  margin-right: 1rem;
+  margin-left: 0.2rem;
 }
 .post-image {
   width: 100%;
@@ -18,35 +28,71 @@
   border-top: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
 }
-.post-h4 {
-  font-weight: normal;
-  padding: 1rem;
+.dots {
+  width: 2.5%;
+  padding-right: 0.8rem;
+}
+.post-caption {
+  display: flex;
+  /* margin-left: 1rem; */
+  margin: 0.3rem 0 0.3rem 1rem;
+}
+.post-caption p {
+  margin-right: 5px;
+}
+.post-username {
+  font-weight: 600;
 }
 .post-commentbox {
   display: flex;
-
+  border-top: 1px solid lightgray;
 }
 .post-input {
   flex: 1;
-  padding: 10px;
+  padding: 20px;
   border: none;
-  border-top: 1px solid lightgray;
-
 }
-.post-input:hover {
-  transform: scale(1.01);
-  -webkit-transform: scale(1.01);
-  -moz-transform: scale(1.01);
-  -ms-transform: scale(1.01);
-  -o-transform: scale(1.01);
-}
-.post-button{
-  flex:0;
+.post-button {
+  flex: 0.1;
   border: none;
-  color: #6082a3;
+  color: lightblue;
   background: transparent;
-  border-top: 1px solid lightgray;
+ 
 }
 .post-comment {
-  padding-left: 1rem;
+  margin: 0.3rem 0 0.3rem 1rem;
+  display: flex;
+}
+
+.post-comment p {
+  margin-right: 5px;
+}
+.comment-username {
+  font-weight: 600;
+}
+.comment-time {
+  margin: 0.5rem 0 0.5rem 1rem;
+  font-size: 0.65rem;
+  color: grey
+}
+.post-icons {
+  width: 20%;
+  height: 2rem;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.post-icons img {
+  object-fit: contain;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.likes {
+  font-weight: 600;
+  margin: 0.3rem 0 0.3rem 1rem;
+}
+.MuiIcon-colorPrimary{
+  color: black;
 }
