@@ -2,7 +2,33 @@ import React, { useState } from "react"
 import { Button } from "@material-ui/core"
 import { storage, db } from "../firebase"
 import firebase from "firebase"
-import './ImageUpload.css'
+import "./ImageUpload.css"
+import LinearProgress from "@material-ui/core/LinearProgress"
+import Typography from "@material-ui/core/Typography"
+import Box from "@material-ui/core/Box"
+import TextField from "@material-ui/core/TextField"
+import { makeStyles } from "@material-ui/core/styles"
+
+function LinearProgressWithLabel(props) {
+  return (
+    <Box display="flex" alignItems="center">
+      <Box width="100%" mr={1}>
+        <LinearProgress variant="determinate" {...props} />
+      </Box>
+      <Box minWidth={35}>
+        <Typography variant="body2" color="textSecondary">{`${Math.round(
+          props.value
+        )}%`}</Typography>
+      </Box>
+    </Box>
+  )
+}
+const useStyles = makeStyles({
+  root: {
+    width: "100%",
+  },
+})
+
 const ImageUpload = ({ username }) => {
   const [caption, setCaption] = useState("")
   const [image, setImage] = useState(null)
@@ -45,18 +71,31 @@ const ImageUpload = ({ username }) => {
       }
     )
   }
-
+  const classes = useStyles()
   return (
-    <div className ='imageupload'>
-      <progress className="upload_progress" value={progress} max="100" />
-      <input
-        type="text"
-        placeholder="Enter a caption..."
+    <div className="imageupload">
+      {caption && (
+        <div className={classes.root}>
+          {" "}
+          <LinearProgressWithLabel value={progress} />
+        </div>
+      )}
+      <TextField
+        id="standart-basic"
+        label="Enter a caption..."
         value={caption}
         onChange={(e) => setCaption(e.target.value)}
       />
-      <input type="file" onChange={handleChange} />
-      <Button onClick={handleUpload}>Upload</Button>
+      <label className="fileContainer" for="Upload">
+        Add photo
+        <input
+          type="file"
+          onChange={handleChange}
+          className="custom-file-input"
+          placeholder="Add Picture"
+        />
+      </label>
+      <Button onClick={image ? handleUpload : null}>Upload</Button>
     </div>
   )
 }

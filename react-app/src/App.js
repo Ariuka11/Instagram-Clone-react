@@ -10,7 +10,6 @@ import ImageUpload from "./components/ImageUpload"
 function getModalStyle() {
   const top = 50
   const left = 50
-
   return {
     top: `${top}%`,
     left: `${left}%`,
@@ -162,16 +161,16 @@ const App = () => {
           </div>
         )}
       </div>
-      <div className="post-container">
-        {posts.map(({ id, post }) => (
-          <Posts post={post} key={id} postId={id} user={user} />
-        ))}
-      </div>
       {user?.displayName ? (
         <ImageUpload username={user.displayName} />
       ) : (
         <h2>Sorry You need to Login to Upload</h2>
       )}
+      <div className="post-container">
+        {posts.map(({ id, post }) => (
+          <Posts post={post} key={id} postId={id} user={user} />
+        ))}
+      </div>
     </div>
   )
 }

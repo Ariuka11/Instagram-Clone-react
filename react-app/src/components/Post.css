@@ -1,5 +1,5 @@
 .post {
-  max-width: 40rem;
+  max-width: 38.375rem;
   background: white;
   border: 1px solid lightgray;
   margin-top: 2rem;
@@ -76,23 +76,17 @@
   color: grey
 }
 .post-icons {
-  width: 20%;
-  height: 2rem;
   display: flex;
-  margin: 0;
-  padding: 0;
-}
-.post-icons img {
-  object-fit: contain;
-  width: 100%;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
 }
 
+
 .likes {
   font-weight: 600;
-  margin: 0.3rem 0 0.3rem 1rem;
+  margin: 0.3rem 0 0.6rem 1rem;
 }
-.MuiIcon-colorPrimary{
-  color: black;
+.first-three {
+  display: flex;
 }
